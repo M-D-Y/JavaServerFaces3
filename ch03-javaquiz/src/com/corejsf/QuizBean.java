@@ -6,15 +6,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-import javax.faces.bean.ManagedBean; 
-   // or import javax.inject.Named;
-import javax.faces.bean.SessionScoped; 
-   // or import javax.enterprise.context.SessionScoped;
+//import javax.faces.bean.ManagedBean; 
+import javax.inject.Named;
+//import javax.faces.bean.SessionScoped; 
+import javax.enterprise.context.SessionScoped;
 
-@ManagedBean // or @Named
+//@ManagedBean 
+@Named
 @SessionScoped
 public class QuizBean implements Serializable {
-   private int currentProblem;
+   private int currentProblem=0;
    private int tries;
    private int score;
    private String response = "";
