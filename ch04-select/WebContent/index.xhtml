@@ -19,27 +19,33 @@
          <h:panelGrid columns="2">
             #{msgs.namePrompt}
             <h:inputText value="#{form.name}"/>
+            
             #{msgs.contactMePrompt}
             <h:selectBooleanCheckbox value="#{form.contactMe}"/>
+            
             #{msgs.bestDayPrompt}
             <h:selectManyMenu value="#{form.bestDaysToContact}">
                <f:selectItems value="#{form.daysOfTheWeek}" var="w"
                               itemLabel="#{w.dayName}" itemValue="#{w.dayNumber}"/>
             </h:selectManyMenu>
+            
             #{msgs.yearOfBirthPrompt}
             <h:selectOneMenu value="#{form.yearOfBirth}" required="true">
                <f:selectItems value="#{form.yearItems}"/>
             </h:selectOneMenu>
+            
             #{msgs.colorPrompt}
             <h:selectManyCheckbox value="#{form.colors}"
                                   selectedClass="selected" disabledClass="disabled"
                                   onchange="submit()">
                <f:selectItems value="#{form.colorItems}"/>
             </h:selectManyCheckbox>
+            
             #{msgs.languagePrompt}
             <h:selectManyListbox size="5" value="#{form.languages}">
                <f:selectItems value="#{form.languageItems}"/>
             </h:selectManyListbox>
+            
             #{msgs.educationPrompt}
             <h:selectOneRadio value="#{form.education}" 
                               layout="pageDirection">
