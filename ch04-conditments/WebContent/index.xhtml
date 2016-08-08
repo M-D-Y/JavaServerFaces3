@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>#{msgs.indexWindowTitle}</title>
+</h:head>
+
+<h:body>
+	<h:outputText value="#{msgs.indexPageTitle}" styleClass="emphasis" />
+	<h:form>
+		<font color="red"> <br></br> Страница 144 <br></br>
+		</font>
+	      #{msgs.indexPageTitle}
+<!--          <h:selectOneMenu value="#{form.conditments}">
+			<f:selectItem itemValue="Cheese" itemLabel="Cheese" />
+			<f:selectItem itemValue="Pickle" itemLabel="Pickle" />
+			<f:selectItem itemValue="Mustard" itemLabel="Mustard" />
+			<f:selectItem itemValue="Lettuce" itemLabel="Lettuce" />
+			<f:selectItem itemValue="Onions" itemLabel="Onions" />
+		</h:selectOneMenu>
+		<br></br>
+		<br></br>
+		<br></br>
+		<h:selectOneMenu value="#{form.conditments}">
+			<f:selectItem itemValue="1" itemLabel="Cheese" />
+			<f:selectItem itemValue="2" itemLabel="Pickle" />
+			<f:selectItem itemValue="3" itemLabel="Mustard" />
+			<f:selectItem itemValue="4" itemLabel="Lettuce" />
+			<f:selectItem itemValue="5" itemLabel="Onions" />
+		</h:selectOneMenu> -->
+		<br></br>
+		<br></br>
+		<br></br>
+		<h:selectOneMenu value="#{form.yearOfBirth}" required="true">
+			<f:selectItems value="#{form.yearItems}" />
+		</h:selectOneMenu>
+		<br></br>
+		<br></br>
+		<br></br>
+
+<!-- 		<h:selectOneMenu value="#{form.conditments}">
+			<f:selectItem value="#{form.cheeseItem}" />
+		</h:selectOneMenu> -->
+		<br></br>
+		<br></br>
+		<br></br>
+		form conditment: 
+		<h:selectOneMenu value="#{form.conditment}">
+			<f:selectItems value="#{form.conditments}" />
+		</h:selectOneMenu>
+		<br></br>
+		<br></br>
+		<br></br>
+		<h:selectOneMenu value="#{form2.conditments}">
+			<f:selectItems value="#{form2.conditmentsItems}" />
+		</h:selectOneMenu>
+		<br></br>
+		<br></br>
+		<br></br>
+		<h:commandButton value="submit" type="submit" action="index">
+		</h:commandButton>
+	</h:form>
+	<h:messages />
+</h:body>
+</html>
