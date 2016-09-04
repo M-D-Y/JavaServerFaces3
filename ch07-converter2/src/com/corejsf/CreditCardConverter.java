@@ -5,9 +5,8 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.ConverterException;
-import javax.faces.convert.FacesConverter;
 
-@FacesConverter(forClass=CreditCard.class)
+//@FacesConverter(forClass=CreditCard.class)
 public class CreditCardConverter implements Converter {
    public Object getAsObject(FacesContext context, UIComponent component,
          String newValue) throws ConverterException {
