@@ -19,6 +19,10 @@
 
             #{msgs.creditCard}
             <h:outputText value="#{payment.card}"/>
+            
+            #{msgs.creditCardType}
+            <h:outputText value="#{payment.card.cardType}"/>
+            
             #{msgs.expirationDate}
             <h:outputText value="#{payment.date}">
                <f:convertDateTime pattern="MM/yyyy"/>

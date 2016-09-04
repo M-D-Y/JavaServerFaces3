@@ -5,8 +5,9 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.ConverterException;
+import javax.faces.convert.FacesConverter;
 
-//@FacesConverter(forClass=CreditCard.class)
+@FacesConverter(forClass=CreditCard.class)
 public class CreditCardConverter implements Converter {
    public Object getAsObject(FacesContext context, UIComponent component,
          String newValue) throws ConverterException {
@@ -40,10 +41,18 @@ public class CreditCardConverter implements Converter {
    public String getAsString(FacesContext context, UIComponent component,
          Object value) throws ConverterException {
       // length 13: xxxx xxx xxx xxx
+	  // 13 - Visa
+	   
       // length 14: xxxxx xxxx xxxxx
+	  // 14 - Diners Club, Carte Blanche
+	   
       // length 15: xxxx xxxxxx xxxxx
+	  // 15 - American Express
+	   
       // length 16: xxxx xxxx xxxx xxxx
-      // length 22: xxxxxx xxxxxxxx xxxxxxxx
+      // length 22: xxxxxx xxxxxxxx xxxxxxxx  
+	  // 16, 22 - MasterCard/Visa/Discover
+
       String v = value.toString();
       int[] boundaries = null;
       int length = v.length();
