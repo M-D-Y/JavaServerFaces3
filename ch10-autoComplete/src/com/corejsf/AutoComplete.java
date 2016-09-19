@@ -2,10 +2,8 @@ package com.corejsf;
 
 import java.io.Serializable;
 
-import javax.faces.bean.ManagedBean;
-   // or import javax.inject.Named;
-import javax.enterprise.context.ApplicationScoped;
-   // or import javax.faces.bean.ApplicationScoped;
+import javax.inject.Named;
+import javax.faces.bean.ApplicationScoped;
 
 @Named //@ManagedBean
 @ApplicationScoped
