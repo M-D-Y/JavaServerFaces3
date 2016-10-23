@@ -11,8 +11,11 @@ import java.util.logging.Logger;
 import javax.annotation.Resource;
 import javax.faces.bean.ManagedBean; 
    // or import javax.inject.Named;
-import javax.faces.bean.SessionScoped; 
-   // or import javax.enterprise.context.SessionScoped;
+import javax.faces.bean.SessionScoped;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+// or import javax.enterprise.context.SessionScoped;
 import javax.sql.DataSource;
 
 @ManagedBean(name="user") // or @Named("user")
@@ -27,18 +30,18 @@ public class UserBean implements Serializable {
    @Resource(name="jdbc/corejsf")
    private DataSource ds;
    
-   /*
-   If your web container does not support resource injection, add this constructor:
+   
+ //  If your web container does not support resource injection, add this constructor:
    public UserBean()
    {
       try {
          Context ctx = new InitialContext();
-         ds = (DataSource) ctx.lookup("java:comp/env/jdbc/mydb");
+         ds = (DataSource) ctx.lookup("java:comp/env/jdbc/corejsf");
       } catch (NamingException ex) {
          logger.log(Level.SEVERE, "DataSource lookup failed", ex);
       }
    }
-   */
+   
 
    public String getName() { return name; }
    public void setName(String newValue) { name = newValue; }
