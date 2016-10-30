@@ -63,7 +63,9 @@ public class UserBean implements Serializable {
 
    public void doLogin() throws NotSupportedException, SystemException,
          RollbackException, HeuristicMixedException, HeuristicRollbackException {
+	   System.out.println("Try to create Entity Manager");
       EntityManager em = emf.createEntityManager();
+      System.out.println("Created Entity Manager");
       try {
          utx.begin();
          em.joinTransaction();
